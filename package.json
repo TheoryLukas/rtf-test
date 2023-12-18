@@ -1,0 +1,25 @@
+{
+  "name": "rtf-test",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.1"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-project2": "cds watch --open project2/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/project1",
+    "app/project2"
+  ]
+}
