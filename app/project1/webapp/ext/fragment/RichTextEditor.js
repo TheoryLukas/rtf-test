@@ -11,8 +11,6 @@ sap.ui.define([
         handleSelect: function(oEvent) {
             var sSelectedKey = oEvent.getParameters().selectedItem.getKey();
             MessageToast.show(sSelectedKey);
-            var test = Controller.byId("idVerticalLayout");
-            var f = 1 + 1;
         }
     };
 });
