@@ -1,7 +1,5 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
 	<mvc:View>
-		<l:VerticalLayout id="idVerticalLayout" class="sapUiContentPadding" width="100%">
-			
-		</l:VerticalLayout>
+		<l:VerticalLayout id="idVerticalLayout" class="sapUiContentPadding" width="100%"/>
 	</mvc:View>
 </core:FragmentDefinition>
