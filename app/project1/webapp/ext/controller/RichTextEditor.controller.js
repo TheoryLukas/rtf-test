@@ -33,8 +33,9 @@ sap.ui.define([
 			onPageReady: function () {
 				var oExtentionAPI = this.base.getExtensionAPI();
 				var oRTE = oExtentionAPI.byId("fe::CustomSubSection::RichTextEditor--idVerticalLayout");
-				var value = oExtentionAPI.editFlow.getView().getBindingContext().getObject().bar;
-				oRichTextEditor.mProperties.value = value;
+				var value = sap.ui.getCore().byId("project1::FooObjectPage--fe::FormContainer::GeneratedFacet1::FormElement::DataField::bar::Field-edit").getValue();
+				//var value = oExtentionAPI.editFlow.getView().getBindingContext().getObject().bar;
+				oRichTextEditor.setValue(value);
 				oRTE.addContent(oRichTextEditor);
 			},
 			editFlow: {
@@ -47,7 +48,8 @@ sap.ui.define([
 				onBeforeSave: function () {
 					var oExtentionAPI = this.base.getExtensionAPI();
 					var oRTE = oExtentionAPI.byId("fe::CustomSubSection::RichTextEditor--idVerticalLayout");
-					var content = oRTE.getContent()[0].mProperties.value;
+					var content = oRTE.getContent()[0].getValue();
+					sap.ui.getCore().byId("project1::FooObjectPage--fe::FormContainer::GeneratedFacet1::FormElement::DataField::bar::Field-edit").setValue(content);
 					oRichTextEditor.mProperties.editable = false;
 					oRTE.addContent(oRichTextEditor);
 				}
